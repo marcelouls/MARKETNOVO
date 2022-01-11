@@ -42,7 +42,7 @@
             </li>
         </ul>
 
-    @auth
+
            <ul class="navbar-nav mr-auto">
                     <li class="nav-item @if(request()->is('admin/stores*')) active @endif">
                         <a class="nav-link" href="{{route('admin.stores.index')}}">Lojas <span class="sr-only">(current)</span></a>
@@ -57,7 +57,7 @@
 
                 <div class="my-2 my-lg-0">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
+                        {{-- <li class="nav-item">
                             <a class="nav-link" href="#" onclick="event.preventDefault();
                                                                   document.querySelector('form.logout').submit(); ">Sair</a>
 
@@ -67,7 +67,7 @@
                         </li>
                         <li class="nav-item">
                             <span class="nav-link">{{auth()->user()->name}}</span>
-                        </li>
+                        </li> --}}
                         <li class="nav-item">
                             <a href="{{route('cart.index')}}" class="nav-link">
                                 @if (session()->has('cart'))
@@ -78,7 +78,7 @@
                         </li>
                     </ul>
                 </div>
-        @endauth
+
 
     </div>
 </nav>
