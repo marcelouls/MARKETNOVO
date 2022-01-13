@@ -23,6 +23,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \PagSeguro\Library::initialize();
+        \PagSeguro\Library::cmsVersion()->setName("Marketnovo")->setRelease("1.0.0");
+        \PagSeguro\Library::moduleVersion()->setName("Marketnovo")->setRelease("1.0.0");
     }
 }
